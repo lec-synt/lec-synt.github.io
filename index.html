@@ -1,1 +1,787 @@
-Demo samples will be here!
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="ftFOlJETX-2KNjaPh8W6s8lhigItRuu9fOmjHZZ0nY0" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>A UNIFIED VOICE CONVERSION FRAMEWORK WITH JOINT REPRESENTATIONS FOR SPEAKER IDENTITY AND EMOTION CONVERSION </title>
+</head>
+<style type="text/css">
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  thead>tr>th:first-child {
+    width: 96px;
+  }
+
+  @media (max-width: 767px) {
+    .big-screen {
+      display: none;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .small-screen {
+      display: none;
+    }
+  }
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+</style>
+
+<body>
+  <header class="header">
+    <div class="jumbotron bg-secondary text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <h1><a class="text-light">A UNIFIED VOICE CONVERSION FRAMEWORK WITH JOINT REPRESENTATIONS FOR SPEAKER IDENTITY AND EMOTION CONVERSION  </h1><br>
+             <font size=5><span style="color:#FFFFFF"> Author 1<sup>1</sup>, Author 2<sup>1</sup>, Author 3<sup>2</sup>, Author 4<sup>2</sup> </br>
+             </font><font size=4> <br> <br> <br> <sup>1</sup>  Author names and affiliations omitted for double-blind review. <br> <sup>2</sup>  Please do not make changes to this section.  <br> <sup>3</sup> Author information may be added after paper acceptance. <br> </font>   </a>  
+              
+            <p>
+              <div class="row">
+              </div>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row" id="arch">
+        <div class="col-md-12">
+          <h2>---------------------------->   Model Architecture   <-----------------------</h2>
+          <br />
+          <div class="column">
+                    <img src="./joint rep.png"  width="300" height="450" / > <p>
+                      <figcaption style="text-align:left;"></font><font size=3> 
+                        Figure 2: Joint speaker and emotion representation network architecture</font>
+                      </figcaption><br>
+                    </div>
+                    <div class="column">
+                        <img src="./stargan-uvc.png"  width="750" height="450" / > <p>
+                          <figcaption style="text-align:center;position: absolute;"></font><font size=3> 
+                            Figure 1: The proposed StarGAN-UVC architecture that performs
+                            both speaker identity and emotion conversion</font>
+                          </figcaption><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="result">
+                    <div class="col-md-12">
+                  <div class="big-screen">
+                    
+                     <h2>----------------------------->   Speech Samples  <---------------------------</h2>
+
+                     </thead> <b>Experimental Setup:</b><p>
+                        <h6> The samples are from four speakers ( two male and two female) with three emotions (neutral, happy, and sad). </h6>
+                    <h6> <b>Methods:</b> 
+                        <ul>
+                            <li>Speaker identity conversion baseline: JES-StarGAN [1]</li>
+                            <li>Emotional voice conversion baseline: StarGAN-EVC [2]</li>
+                            <li>Proposed Method: StarGAN-UVC, a unified framework for both speaker idendity and emotional voice conversion</li>
+                          </ul>
+                       </h6>
+
+                     
+<br /><br />
+
+<br>
+                        <h2 style="text-decoration: underline;">Speaker Identity Conversion</h2>
+                        <br>
+                      <table class="table">
+
+             
+                         
+                        </tr>
+
+
+                      <tbody>
+                                
+                                
+                                <tr>
+                                    <th></th>
+                                    <th style="text-align:center;">   Source</th>
+                                    <th style="text-align:center;">   Target</th>
+                                    <th style="text-align:center;">   JES-StarGAN</th>
+                                    <th style="text-align:center;">   StarGAN-UVC(proposed)</th>
+		    
+                              
+                          
+                                </tr>
+		 <!-- single sentence -->
+                                                                  </tr>
+                                   <th colspan=5><h4> Neutral</h4></th>
+                               </tr>
+                                <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0018_to_0016_000023_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0018_to_0016_000023_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0018_to_0016_000023_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0018_to_0016_000023_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0020_000025_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0020_000025_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0020_000025_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0020_000025_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0018_000041_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0018_000041_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0018_000041_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0013_to_0018_000041_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                                                    <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0016_to_0013_000027_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0016_to_0013_000027_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0016_to_0013_000027_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Neutral/0016_to_0013_000027_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                              
+                                                                                                 </tr>
+                                  <th colspan=3><h4>Happy</h4></th>
+                              </tr>
+                                <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0018_to_0016_000736_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0018_to_0016_000736_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0018_to_0016_000736_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0018_to_0016_000736_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0020_000728_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0020_000728_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0020_000728_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0020_000728_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0016_to_0013_000732_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0016_to_0013_000732_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0016_to_0013_000732_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0016_to_0013_000732_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                                                    <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0018_000722_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0018_000722_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0018_000722_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Happy/0013_to_0018_000722_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                
+		                                                                                                 </tr>
+                                  <th colspan=5><h4> Sad</h4></th>
+                              </tr>
+                                <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0018_to_0016_001077_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0018_to_0016_001077_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0018_to_0016_001077_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0018_to_0016_001077_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0020_001072_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0020_001072_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0020_001072_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0020_001072_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0018_001072_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0018_001072_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0018_001072_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0013_to_0018_001072_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                                                    <td>
+                                    <audio controls>
+                                     <source src="samples/speaker_identity/Sad/0016_to_0013_001093_source.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0016_to_0013_001093_spk_truth.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0016_to_0013_001093_spk_jes.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="samples/speaker_identity/Sad/0016_to_0013_001093_spk.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                                                  <!-- single sentence -->
+
+                               
+                                </tr>
+
+                      </tbody>
+                       
+
+                    
+
+
+                    <div class="row">
+
+                  
+                  <table class="table">
+                    <br>
+                    <h2 style="text-decoration: underline;">Emotional Voice Conversion</h2>
+                    <br>
+         
+                     
+                    </tr>
+
+
+                  <tbody>
+                            
+                            
+                            <tr>
+                                <th></th>
+                                <th style="text-align:center;">   Source</th>
+                                <th style="text-align:center;">   Target</th>
+                                <th style="text-align:center;">   StarGAN-EVC</th>
+                                <th style="text-align:center;">   StarGAN-UVC(proposed)</th>
+        
+                          
+                      
+                            </tr>
+     <!-- single sentence -->
+                                                              </tr>
+                               <th colspan=5><h4> Neutral-to-Happy</h4></th>
+                           </tr>
+                           <tr>
+                            <th scope="row">    </th>
+                                                              <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0018_to_0016_000028_source.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0018_to_0016_000028_emo_truth.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0018_0018_000028.wav.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0018_to_0016_000028_emo.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                                                            <!-- single sentence -->
+
+                          
+                                                                                               </tr>
+                                                       <tr>
+                            <th scope="row">    </th>
+                                                              <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0016_to_0013_000022_source.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0016_to_0013_000022_emo_truth.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0016_0016_000022.wav.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0016_to_0013_000022_emo.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                                                            <!-- single sentence -->
+
+                          
+                                                                                               </tr>
+                                                                                                                          <tr>
+                            <th scope="row">    </th>
+                                                              <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0013_to_0020_000022_source.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0013_to_0020_000022_emo_truth.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0013_0013_000022.wav.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Happy/0013_to_0020_000022_emo.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                                                            <!-- single sentence -->
+
+                          
+                                                                                               </tr>
+                            <!-- single sentence -->                           <tr>
+               <!-- single sentence -->
+
+
+                                                                                                    </tr>
+                               <th colspan=5><h4> Neutral-to-Sad</h4></th>
+                           </tr>
+                           <tr>
+                            <th scope="row">    </th>
+                                                              <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_to_0020_000023_source.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_to_0020_000023_emo_truth.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_0013_000023.wav.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_to_0020_000023_emo.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                                                            <!-- single sentence -->
+
+                          
+                                                                                               </tr>
+                                                       <tr>
+                            <th scope="row">    </th>
+                                                              <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_to_0020_000046_source.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_to_0020_000046_emo_truth.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_0013_000046.wav.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0013_to_0020_000046_emo.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                                                            <!-- single sentence -->
+
+                          
+                                                                                               </tr>
+                                                                                                                          <tr>
+                            <th scope="row">    </th>
+                                                              <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0016_to_0013_000021_source.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0016_to_0013_000021_emo_truth.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0016_0016_000021.wav.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="samples/emotion/Neutral_to_Sad/0016_to_0013_000021_emo.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                                                            <!-- single sentence -->
+
+                          
+                                                                                               </tr>
+                            <!-- single sentence -->                           <tr>
+               <!-- single sentence -->
+
+
+                                                                                                    </tr>
+                        </table>
+                      </div>
+ </div>
+
+[1] Du, Zongyang et al. “Expressive Voice Conversion: A Joint Framework for Speaker Identity and Emotional Style Transfer.” 2021 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU) (2021): 594-601.
+ <br>
+[2] Rizos, Georgios et al. “Stargan for Emotional Speech Conversion: Validated by Data Augmentation of End-To-End Emotion Recognition.” ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (2020): 3502-3506.
+
+<p>
+
+
+
+
+
+                  </div>
+                 
+        </div>
+      </div>
+      <hr>
+      <div class="row" id="ref">
+        <div class="col">
+          <!--<h2>References</h2>
+          
+         -->
+        </div>
+      </div>
+      <hr>
+      <!-- <div class="row" id="contact">
+          <div class="col">
+            <h2>Contact</h2>
+            <div></div>
+          </div>
+        </div> -->
+    </div>
+  </main>
+  <footer class="bg-secondary text-light mt-4 pt-3 pb-2 ">
+    <div class="container">
+      <p class="text-center">
+        
+      </p>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
